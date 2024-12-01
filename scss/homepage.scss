@@ -670,18 +670,18 @@ footer {
         }
 
         .restaurants-cards {
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: 550px 550px;
             margin-left: 20px;
             overflow: scroll;
             overflow-y: hidden;
-            margin: 0 0 44px 193px;
+            margin: 0 0 44px 170px;
 
 
             .card-heart {
                 margin-right: 30px;
                 height: 251px;
-                width: 335px;
+                width: 500px;
                 margin-bottom: 20px;
                 display: flex;
                 flex-direction: column;
@@ -696,7 +696,7 @@ footer {
                     .img {
                         object-fit: cover;
                         height: 185px;
-                        width: 335px;
+                        width: 100%;
                         border-radius: 15px 15px 0 0;
                     }
 

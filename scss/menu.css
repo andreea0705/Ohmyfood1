@@ -81,7 +81,6 @@ main {
   flex-direction: column;
   position: relative;
   background-color: #f6f6f6;
-  /*BTN ORDER*/
 }
 main .blank {
   position: absolute;
@@ -354,7 +353,7 @@ footer a {
   }
   footer .logo-footer {
     height: 27px;
-    width: 137.5816345215px;
+    width: 137px;
     margin: 0 120px 0px 71px;
   }
   footer .footer-section {

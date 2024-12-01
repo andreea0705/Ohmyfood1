@@ -570,8 +570,6 @@ footer .footer-section .help {
       width: 137.5816345215px;
       margin: 0 120px 0px 71px;
 
-      filter: invert(100%);/*la couleur blanche de mon logo*/
-
     }
     footer .footer-section {
       display: flex;
