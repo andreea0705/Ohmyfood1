@@ -569,10 +569,9 @@ footer .footer-section .help {
       height: 27px;
       width: 137.5816345215px;
       margin: 0 120px 0px 71px;
-<<<<<<< HEAD
+
       filter: invert(100%);/*la couleur blanche de mon logo*/
-=======
->>>>>>> fa6e656 (clean project)
+
     }
     footer .footer-section {
       display: flex;
