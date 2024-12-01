@@ -1,0 +1,596 @@
+/*MOBILE FIRST*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+    font-family: "Raleway", sans-serif;
+    font-family: "Roboto", sans-serif;
+    min-width: 375px;
+}
+  
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*LOADER*/
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5EDFF;
+    width: 100%;
+    position: fixed;
+    inset: 0;
+    animation: disapear 3s forwards;
+}
+.loader .card-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: float 3s ease-in-out infinite;
+}
+.loader .card-loader .chef {
+    width: 150px;
+    height: 150px;
+}
+.loader .card-loader .word {
+    margin-top: 20px;
+    font-size: 12px;
+    animation: fontAnim 2s linear infinite;
+}
+/*ANIMATION*/
+@keyframes fontAnim { /*définir les étapes d'une animation*/
+    0% {
+      width: 7ch;/*Au début de l'animation, la width est définie à 7ch*/
+    }
+    16% {
+      width: 8ch;
+    }
+    32% {
+      width: 9ch;
+    }
+    48% {
+      width: 10ch;
+    }
+    64% {
+      width: 11ch;
+    }
+    80% {
+      width: 12ch;
+    }
+    100% {
+      width: 13ch;/*À la fin de l'animation, la width est 13ch*/
+    }
+}
+@keyframes disapear {
+    0% { /*l'opacité de l'élément est 1 (opaque) et le z-index est défini à 1, ce qui peut le placer au-dessus d'autres éléments*/
+      opacity: 1;
+      z-index: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    88% {
+      opacity: 1;
+      z-index: 1;
+    }
+    100% { /*À la fin de l'animation, l'opacité passe à 0 (transparent) et le z-index est défini à -2, ce qui envoie l'élément derrière d'autres éléments*/
+      opacity: 0;
+      z-index: -2;
+    }
+}
+@keyframes float {
+    0% {
+      transform: translatey(0px);/*l'élément est à sa position d'origine*/
+    }
+    50% {
+      transform: translatey(-20px);/*l'élément se déplace de 20 pixels vers le haut*/
+    }
+    100% {
+      transform: translatey(0px);/*l'élément revient à sa position d'origine*/
+    }
+  }
+/*HEADER*/
+header {/*logo edit*/
+    display: flex;
+    flex-direction: column;
+}
+header .logo-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+header .logo-section .logo {
+    display: flex;
+    height: 33px;
+    width: 195px;
+    margin: 15px 0px;
+}
+
+/*LOCATION PARIS VILLE*/
+.location-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #EAEAEA;/*couleur background de paris ville*/
+    background: linear-gradient(180deg, rgb(190, 190, 190) 0%, #EAEAEA 20%);
+    padding: 16px 15px;
+}
+.location-section .location {
+    display: flex;
+    height: 16px;
+    width: 12px;
+    color: #353535;
+}
+.location-section p {/*Paris belleville edit*/
+    font-size: 16px;
+    font-weight: 500;
+    color: #353535;
+    text-align: center;
+    margin-left: 17px;
+}
+
+/*TAGLINE SECTION + BTN*/
+.tagline-section {
+    display: flex;/*Utiliser Flexbox pour la mise en page.*/
+    flex-direction: column;/*Dispose les éléments enfants en colonne.*/
+    justify-content: center;/*Centre les éléments verticalement*/
+    align-items: center;/*Centre les éléments horizontalement.*/
+    padding-top: 39px;
+    padding-bottom: 57px;
+    padding-left: 17px;
+    padding-right: 17px;
+    background-color: #F7F7F7;
+}
+.tagline-section h1 {/*reservez le menu qui vous convient*/
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 18px;
+    padding: 0 35px;
+}
+.tagline-section p {/*decouvrez des restaurants...*/
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+.tagline-section .btn-explore {/*edit du boutton*/
+    display: flex;/*Utilise Flexbox pour centrer le contenu.*/
+    justify-content: center;
+    align-items: center;
+    height: 50px;/*Définit la taille du bouton.*/
+    width: 218px;
+    border-radius: 25px;/*arrondir les bordures du boutton*/
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 27px;/*Espace en haut du bouton.*/
+    border: transparent;/*Retire les bordures par défaut.*/
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);/*Ajoute une ombre subtile pour un effet de profondeur.*/
+    background: linear-gradient(-10deg, #9356DC -5.2%, #FF79DA 110.74%);/*Applique un dégradé comme fond du bouton.*/
+}
+.tagline-section .btn-explore:hover {/*transformer le boutton quand on survole avec la souris*/
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.486);/*Augmente l'ombre lors du survol pour plus de profondeur.*/
+    transform: scale(1.06);/*Agrandit légèrement le bouton lors du survol.*/
+    transition: transform 1s ease-in-out;/*Ajoute une transition fluide pour l'effet de mise à l'échelle.*/
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);/*Change l'angle du dégradé lors du survol.*/
+    cursor: pointer;
+}
+
+/*FUNCTIONNING*/
+.functionning-section {
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    margin-top: 48px;
+}
+.functionning-section h1 {
+    margin-left: 20px;
+}
+.functionning-section .btn-functionning {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+.functionning-section .btn-functionning .btn-section:hover .icon-smartphone {
+    fill: #9356DC;
+    transform: scale(1.1);
+}
+.functionning-section .btn-functionning .btn-section:hover .icon-menu {
+    fill: #9356DC;
+    transform: scale(1.1);
+}
+.functionning-section .btn-functionning .btn-section:hover .icon-shop {
+    fill: #9356DC;
+    transform: scale(1.1);
+}
+.functionning-section .btn-functionning .btn-section:hover {
+    background-color: #F5EDFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.functionning-section .btn-functionning .btn-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+    height: 72.38px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    margin-bottom: 22px;
+    background: #F7F7F7;
+}
+.functionning-section .btn-functionning .btn-section .btn-num {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    fill: #9356DC;
+    top: 50%;
+    left: 1%;
+    transform: translate(-50%, -50%);
+}
+/*ranger les components des buttons*/
+.functionning-section .btn-functionning .btn-section .icon-smartphone {
+    height: 20px;
+    width: 13.018737793px;
+    fill: #7E7E7E;
+    margin-left: 35px;
+}
+.functionning-section .btn-functionning .btn-section .icon-menu {
+    fill: #7E7E7E;
+    height: 16px;
+    width: 16px;
+    margin-left: 35px;
+}
+.functionning-section .btn-functionning .btn-section .icon-shop {
+    fill: #7E7E7E;
+    height: 18px;
+    width: 18px;
+    margin-left: 35px;
+}
+.functionning-section .btn-functionning .btn-section .btn-text {
+    display: flex;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    margin-left: 27px;
+}
+
+/*RESTAURANTS*/
+.restaurants-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #F7F7F7;/*Background de restaurants*/
+}
+.restaurants-section h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    margin: 51px 0 20px 20px;
+}
+.restaurants-section .restaurants-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;/*mettre les cards au centre*/
+    margin-bottom: 44px;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+.restaurants-section .restaurants-cards .card-heart {
+    display: flex;
+    flex-direction: column;
+    height: 251px;/*hauteur des cards*/
+    width: 100%;/*Largeur de la carte égale à celle du conteneur.*/
+    background: #ffffff;/*Couleur de fond blanche.*/
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);/*Ombre subtile pour un effet de profondeur.*/
+    border-radius: 15px;/*Arrondit les coins.*/
+    margin-bottom: 20px;/*Espace en bas de chaque carte.*/
+    position: relative;/*Permet de positionner les éléments enfants de manière absolue par rapport à cette carte.*/
+}
+.restaurants-section .restaurants-cards .card-heart a {
+    text-decoration: none;/*Supprime le soulignement des liens*/
+    color: #000000;
+    width: 100%;/*Largeur du lien égale à celle du parent*/
+}
+.restaurants-section .restaurants-cards .card-heart a .img {
+    -o-object-fit: cover;
+       object-fit: cover;/*L'image couvre toute la zone sans déformation*/
+    height: 185px;/*Hauteur de l'image*/
+    width: 100%;/*Largeur de l'image.*/
+    border-radius: 15px 15px 0 0;
+}
+.restaurants-section .restaurants-cards .card-heart a .text-card {
+    display: flex;
+    margin-top: 5px;
+    flex-direction: column;
+    justify-content: center;
+}
+.restaurants-section .restaurants-cards .card-heart a .text-card h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 12.81px;
+    margin-bottom: 5px;
+}
+.restaurants-section .restaurants-cards .card-heart a .text-card p {
+    font-size: 17px;
+    font-weight: 300;
+    margin-left: 12.81px;
+}
+.restaurants-section .restaurants-cards .card-heart .new {
+    position: absolute;
+    top: 9px;
+    right: 14px;
+}
+.restaurants-section .restaurants-cards .card-heart .heart-animation .heart {
+    visibility: visible;/*Highlight NOUVEAU qui est vissible à droite*/
+    position: absolute;
+    right: 14px;
+    top: 200px;
+}
+.restaurants-section .restaurants-cards .card-heart .heart-animation .full-heart {
+    visibility: hidden;
+    position: absolute;
+    top: 200px;
+    right: 14px;
+    opacity: 0;
+}
+.restaurants-section .restaurants-cards .card-heart .heart-animation:hover .heart {
+    visibility: hidden;
+    cursor: pointer;
+    top: 200px;
+    right: 14px;
+}
+.restaurants-section .restaurants-cards .card-heart .heart-animation:hover .full-heart {
+    visibility: visible;
+    top: 200px;
+    right: 14px;
+    transition: 1.5s;
+    opacity: 1;
+    cursor: pointer;
+}
+  
+/*FOOTER*/
+footer {
+    display: flex;
+    flex-direction: column;/*Les éléments enfants sont disposés en colonne*/
+    background-color: #353535;/*Couleur de fond du footer*/
+    height: 197px;/*Hauteur fixe du footer*/
+}
+footer .logo-footer {
+    height: 27px;/*Hauteur du logo.*/
+    width: 137.58px;
+    margin: 22px 0 16px 25px;
+}
+footer .footer-section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+footer .footer-section .text-footer {
+    display: flex;
+    flex-direction: column;
+}
+footer .footer-section .text-footer p {
+    font-family: Roboto;
+    margin-bottom: 7px;/*Espacement en dessous de chaque paragraphe*/
+    color: #ffffff;/*Couleur du texte (blanc)*/
+}
+footer .footer-section .text-footer .bottom {
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: 300;
+}
+footer .footer-section .text-footer .top {
+    margin-left: 47px;
+    font-size: 16px;
+    font-weight: 400;
+}
+footer .footer-section .knife-fork {
+    position: absolute;
+    top: 2px;
+    left: 25px;
+    height: 13px;
+    width: 11px;
+}
+footer .footer-section .help {
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    height: 13px;
+    width: 11px;
+}
+
+/*TABLET*/
+@media screen and (min-width: 768px) and (max-width: 1224px) {
+    /*FUNCTIONNING*/
+    .functionning-section {
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+      margin-top: 48px;
+    }
+    .functionning-section .btn-functionning {
+      display: flex;
+      flex-direction: row;/*mettre les buttons en ligne*/
+      justify-content: space-evenly;/*mettre de l'espace entre eux*/
+    }
+    .functionning-section .btn-functionning .btn-section {
+      width: 30%;
+    }
+     /*RESTAURANTS*/
+     /*personnalise l'apparence de la barre de défilement*/
+    .restaurants-cards::-webkit-scrollbar {
+      height: 10px;/*la hauteur de la barre*/
+      background-color: #F5EDFF;/*la couleur de fond de la barre*/
+    }
+    .restaurants-cards::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+      background: linear-gradient(-10deg, #9356DC -5.2%, #FF79DA 110.74%);
+    }
+    .restaurants-cards::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);/*Applique une ombre interne à la track, ajoutant de la profondeur*/
+      border-radius: 10px;
+      background-color: #F7F7F7;
+    }
+    .restaurants-section {
+      display: flex;
+      flex-direction: column;
+    }
+    .restaurants-section h1 {
+      margin: 51px 0 20px 20px;/*les marges autour du titre*/
+    }
+    .restaurants-section .restaurants-cards { /*LA BARRE DE SCROLL DROITE*/
+      display: flex;
+      flex-direction: row;/*mettre les cards en ligne*/
+      margin-left: 20px;/*une marge de 20px à gauche de l'élément contenant les cartes*/
+      overflow: scroll;/*Ajoute des barres de défilement*/
+      overflow-y: hidden;
+    }
+    .restaurants-section .restaurants-cards .card-heart {
+      margin-right: 30px;
+      height: 251px;
+      width: 335px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+    }
+    .restaurants-section .restaurants-cards .card-heart a {
+      text-decoration: none;
+      color: #000000;
+    }
+    .restaurants-section .restaurants-cards .card-heart a .img {
+      -o-object-fit: cover;
+        object-fit: cover;
+      height: 185px;/*hauteur des img*/
+      width: 335px;
+      border-radius: 15px 15px 0 0;/*borders arrondis des images*/
+    }
+}
+/*DESKTOP*/
+@media screen and (min-width: 1224px) {
+    /*TAGLINE SECTION + BTN*/
+    .tagline-section h1 {
+      font-size: 40px;
+    }
+    /*FUNCTIONNING*/
+    .functionning-section {
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+      margin-top: 48px;
+    }
+    .functionning-section h1 {
+      margin-left: 193px;
+    }
+    .functionning-section .btn-functionning {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 180px 0 193px;
+    }
+    .functionning-section .btn-functionning .btn-section {
+      width: 30%;
+    }
+    /*RESTAURANTS*/
+    .restaurants-cards::-webkit-scrollbar {
+      height: 10px;
+      background-color: #F5EDFF;
+    }
+    .restaurants-cards::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+      background: linear-gradient(-10deg, #9356DC -5.2%, #FF79DA 110.74%);
+    }
+    .restaurants-cards::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: #F7F7F7;
+    }
+    .restaurants-section {
+      display: flex;
+      flex-direction: column;
+    }
+    .restaurants-section h1 {
+      margin: 51px 0 20px 193px;
+    }
+    .restaurants-section .restaurants-cards {
+      display: grid;
+      grid-template-columns: 550px 550px;
+      gap: 40px;
+      margin-left: 20px;
+      overflow: scroll;
+      overflow-y: hidden;
+      margin: 0 0 44px 170px;
+    }
+    .restaurants-section .restaurants-cards .card-heart {
+      margin-right: 30px;
+      height: 251px;
+      width: 500px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+    }
+    .restaurants-section .restaurants-cards .card-heart a {
+      text-decoration: none;
+      color: #000000;
+    }
+    .restaurants-section .restaurants-cards .card-heart a .img {
+      -o-object-fit: cover;
+         object-fit: cover;
+      height: 185px;
+      width: 100%;
+      border-radius: 15px 15px 0 0;
+    }
+     /*FOOTER*/
+    footer {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;/*Mettre le titre à droite*/
+      height: 114px;
+    }
+    footer .logo-footer {
+      height: 27px;
+      width: 137.5816345215px;
+      margin: 0 120px 0px 71px;
+<<<<<<< HEAD
+      filter: invert(100%);/*la couleur blanche de mon logo*/
+=======
+>>>>>>> fa6e656 (clean project)
+    }
+    footer .footer-section {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    footer .footer-section .text-footer {
+      display: flex;
+      flex-direction: row;
+    }
+    footer .footer-section .knife-fork {
+      position: absolute;
+      top: 2px;
+      left: 25px;
+    }
+    footer .footer-section .help {
+      position: absolute;
+      top: 2px;
+      left: 240px;
+    }
+}
