@@ -420,7 +420,7 @@ header {
                     visibility: visible;
                     position: absolute;
                     right: 14px;
-                    top: 200px;
+                    top: 180px;
                 }
 
                 .full-heart {
@@ -623,11 +623,12 @@ footer {
     .functionning-section {
         display: flex;
         flex-direction: column;
+        align-items: center;
         height: 200px;
         margin-top: 48px;
 
         h1 {
-            margin-left: 16%;
+            margin-right: 900px;
         }
 
 
@@ -635,8 +636,7 @@ footer {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
-            margin: 0 15% 0 15%;
-            width: 1000px;
+            width: 1100px;
 
 
             .btn-section {
@@ -665,25 +665,24 @@ footer {
     .restaurants-section {
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         h1 {
-            margin: 51px 15% 20px 16%;
+            margin: 51px 910px 30px 0px;
         }
 
         .restaurants-cards {
             display: grid;
-            grid-template-columns: 500px 500px;
-            margin-left: 20px;
+            grid-template-columns: 600px 600px;
             overflow: scroll;
             overflow-y: hidden;
-            margin: 0 15% 0 15%;
+            margin-left: 140px;
 
 
             .card-heart {
-                margin-right: 30px;
-                height: 251px;
-                width: 450px;
-                margin-bottom: 40px;
+                height: 240px;
+                width: 490px;
+                margin-bottom: 60px;
                 display: flex;
                 flex-direction: column;
                 background: $white;
@@ -696,7 +695,7 @@ footer {
 
                     .img {
                         object-fit: cover;
-                        height: 185px;
+                        height: 160px;
                         width: 100%;
                         border-radius: 15px 15px 0 0;
                     }
