@@ -48,7 +48,7 @@ header .arrow {
 }
 .img-container .img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   height: 275px;
   width: 100%;
 }
@@ -60,7 +60,7 @@ header .arrow {
     opacity: 0;
   }
   100% {
-    transform: translateX(0px);
+    transform: translateX(0%);
     opacity: 1;
   }
 }
@@ -80,7 +80,8 @@ main {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
+  /*BTN ORDER*/
 }
 main .blank {
   position: absolute;
@@ -88,7 +89,7 @@ main .blank {
   height: 33px;
   width: 100%;
   border-radius: 40px 40px 0 0;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 main .title-heart {
   width: 370px;
@@ -131,7 +132,7 @@ main .menu {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   margin-top: 42px;
 }
 main .menu h2 {
@@ -142,7 +143,7 @@ main .menu h2 {
   padding-bottom: 5px;
 }
 main .menu .lign {
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   top: 27px;
   width: 40px;
   height: 3px;
@@ -153,7 +154,7 @@ main .menu .card {
   flex-direction: row;
   width: 96%;
   height: 69px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   margin: 12px 13px 12px 13px;
@@ -201,14 +202,33 @@ main .menu .card .btn-check {
 main .menu .card:hover .price {
   margin-right: 77px;
 }
+@keyframes appear { 
+0% { 
+  opacity: 0;  
+} 
+20%{
+  opacity: 0.4;
+}
+60%{
+  opacity: 0.8;
+}
+80%{
+  opacity: 1.2;
+}
+100% { 
+  opacity: 2; 
+} 
+}
+
 main .menu .card:hover .btn-check {
   display: flex;
   height: 69px;
   width: 59px;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   align-items: center;
   justify-content: center;
+  animation: appear 5s ease-in-out forwards; /* Applique l'animation */
 }
 main .menu .card:hover .btn-check .check {
   width: 20px;
@@ -244,14 +264,14 @@ main .btn-order {
   margin: 40px 0 40px 0;
   border: transparent;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(-10deg, #9356dc -5.2%, #ff79da 110.74%);
+  background: linear-gradient(-10deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 main .btn-order:hover {
   cursor: pointer;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.486);
   transform: scale(1.06);
   transition: ease-out 1s;
-  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
 /*FOOTER*/
@@ -316,7 +336,7 @@ footer a {
     flex-direction: column;
     align-items: center;
     margin: 0 192px 0 193px;
-    background-color: #f6f6f6;
+    background-color: #F6F6F6;
   }
   main .heart-animation .heart {
     visibility: visible;
@@ -375,4 +395,4 @@ footer a {
     top: 2px;
     left: 240px;
   }
-} /*# sourceMappingURL=menu.css.map */
+}/*# sourceMappingURL=menu.css.map */
