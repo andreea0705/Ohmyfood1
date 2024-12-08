@@ -252,6 +252,23 @@ main {
             .price {
                 margin-right: 77px;
             }
+            @keyframes appear { 
+                0% { 
+                  opacity: 0;  
+                } 
+                20%{
+                  opacity: 0.4;
+                }
+                60%{
+                  opacity: 0.8;
+                }
+                80%{
+                  opacity: 1.2;
+                }
+                100% { 
+                  opacity: 2; 
+                } 
+            }
 
             .btn-check {
                 display: flex;
@@ -261,6 +278,7 @@ main {
                 border-radius: 0px 15px 15px 0px;
                 align-items: center;
                 justify-content: center;
+                animation: appear 5s ease-in-out forwards;
               
 
 
