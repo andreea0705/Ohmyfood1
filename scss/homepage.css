@@ -494,13 +494,14 @@ footer .footer-section .help {
     margin-top: 48px;
   }
   .functionning-section h1 {
-    margin-left: 21%;
+    margin-left: 16%;
   }
   .functionning-section .btn-functionning {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 0 20% 0 20%;
+    margin: 0 15% 0 15%;
+    width: 1000px;
   }
   .functionning-section .btn-functionning .btn-section {
     width: 30%;
@@ -523,21 +524,21 @@ footer .footer-section .help {
     flex-direction: column;
   }
   .restaurants-section h1 {
-    margin: 51px 20% 20px 21%;
+    margin: 51px 15% 20px 16%;
   }
   .restaurants-section .restaurants-cards {
     display: grid;
-    grid-template-columns: 550px 550px;
+    grid-template-columns: 500px 500px;
     margin-left: 20px;
     overflow: scroll;
     overflow-y: hidden;
-    margin: 0 20% 0 20%;
+    margin: 0 15% 0 15%;
   }
   .restaurants-section .restaurants-cards .card-heart {
     margin-right: 30px;
     height: 251px;
-    width: 500px;
-    margin-bottom: 20px;
+    width: 450px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     background: #ffffff;
