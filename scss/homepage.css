@@ -494,13 +494,13 @@ footer .footer-section .help {
     margin-top: 48px;
   }
   .functionning-section h1 {
-    margin-left: 193px;
+    margin-left: 21%;
   }
   .functionning-section .btn-functionning {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 0 40px 0 193px;
+    margin: 0 20% 0 20%;
   }
   .functionning-section .btn-functionning .btn-section {
     width: 30%;
@@ -523,7 +523,7 @@ footer .footer-section .help {
     flex-direction: column;
   }
   .restaurants-section h1 {
-    margin: 51px 0 20px 193px;
+    margin: 51px 20% 20px 21%;
   }
   .restaurants-section .restaurants-cards {
     display: grid;
@@ -531,7 +531,7 @@ footer .footer-section .help {
     margin-left: 20px;
     overflow: scroll;
     overflow-y: hidden;
-    margin: 0 0 44px 170px;
+    margin: 0 20% 0 20%;
   }
   .restaurants-section .restaurants-cards .card-heart {
     margin-right: 30px;

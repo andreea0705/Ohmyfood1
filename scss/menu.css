@@ -202,24 +202,23 @@ main .menu .card .btn-check {
 main .menu .card:hover .price {
   margin-right: 77px;
 }
-@keyframes appear { 
-0% { 
-  opacity: 0;  
-} 
-20%{
-  opacity: 0.4;
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 1.2;
+  }
+  100% {
+    opacity: 2;
+  }
 }
-60%{
-  opacity: 0.8;
-}
-80%{
-  opacity: 1.2;
-}
-100% { 
-  opacity: 2; 
-} 
-}
-
 main .menu .card:hover .btn-check {
   display: flex;
   height: 69px;
@@ -228,7 +227,7 @@ main .menu .card:hover .btn-check {
   border-radius: 0px 15px 15px 0px;
   align-items: center;
   justify-content: center;
-  animation: appear 5s ease-in-out forwards; /* Applique l'animation */
+  animation: appear 5s ease-in-out forwards;
 }
 main .menu .card:hover .btn-check .check {
   width: 20px;
