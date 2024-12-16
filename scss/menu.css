@@ -202,21 +202,22 @@ main .menu .card .btn-check {
 main .menu .card:hover .price {
   margin-right: 77px;
 }
-@keyframes appear {
+@keyframes appearandincrease {
   0% {
-    opacity: 0;
-  }
-  20% {
+    transform: translateX(0);
     opacity: 0.4;
+    width: 59px;
   }
-  60% {
-    opacity: 0.8;
+  30%{
+    opacity:0.9;
   }
-  80% {
-    opacity: 1.2;
+  40%{
+    opacity: 1;
   }
   100% {
-    opacity: 2;
+    transform: translateX(0px);
+    opacity: 1;
+    width:150px;
   }
 }
 main .menu .card:hover .btn-check {
@@ -227,13 +228,13 @@ main .menu .card:hover .btn-check {
   border-radius: 0px 15px 15px 0px;
   align-items: center;
   justify-content: center;
-  animation: appear 5s ease-in-out forwards;
+  animation: appearandincrease 2s ease-in-out forwards;
 }
 main .menu .card:hover .btn-check .check {
   width: 20px;
   height: 20px;
   animation-name: rotate;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-timing-function: ease-in-out;
 }
 @keyframes rotate {
