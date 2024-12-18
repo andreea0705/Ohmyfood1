@@ -200,7 +200,7 @@ main {
             position: relative;
             justify-content: space-between;
             cursor: pointer;
-
+           
             .text-card {
                 margin: 12px 0 0 11px;
                 display: flex;
@@ -249,8 +249,11 @@ main {
         }
         .card:hover {
             .price {
-                margin-right: 77px;
-            }
+                animation-name:sliding;
+                animation-duration: 500ms;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards; 
+            } 
 
             .btn-check {
                 display: flex;
@@ -260,35 +263,68 @@ main {
                 border-radius: 0px 15px 15px 0px;
                 align-items: center;
                 justify-content: center;
-                animation: appearandincrease 2s ease-in-out forwards;
+                animation: appearandincrease 500ms;
                 .check {
                     width: 20px;
                     height: 20px;
                     animation-name: rotate;
-                    animation-duration: 2s;
+                    animation-duration: 1s;
                     animation-timing-function: ease-in-out;
                 }
             }
+            .card:not(:hover) .btn-check {
+                display: flex;
+                animation: decreaseanddisappear 500ms forwards;
+           }
+            .card:not(:hover) .price {
+                 animation-name: slidingreverse;
+                 animation-duration: 500ms;
+                 animation-timing-function: ease-in-out;
+                 animation-fill-mode: forwards; 
+            }
+        }
+    }
+    @keyframes sliding {
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-160px);
         }
     }
     @keyframes appearandincrease { 
         0% { 
           transform: translateX(0);
           opacity: 0.4;
-          width: 59px;
+          width:0px;
         } 
-        30%{
-            opacity: 0.9;
-        }
-        40%{
-            opacity: 1;
-        }
         100% {  
           transform: translateX(0px);
           opacity: 1;
           width:150px;
         } 
     }
+    @keyframes slidingreverse {
+        0%{
+         transform: translateX(-160px);
+        }
+        100%{
+         transform: translateX(0);
+        }
+    }
+    @keyframes decreaseanddisappear {
+        0% {  
+         transform: translateX(0px);
+         opacity: 1;
+         width: 150px;
+        }
+        100% { 
+         transform: translateX(0);
+         opacity: 0.4;
+         width: 0px;
+        }
+    }
+
     @keyframes rotate {
 
         0% {
