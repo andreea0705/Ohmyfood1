@@ -338,10 +338,13 @@ header .logo-section .logo {
   position: absolute;
   right: 14px;
   top: 200px;
+  transition: 1s;
+  opacity: 1;
 }
 .restaurants-section .restaurants-cards .card-heart .heart-animation .full-heart {
   visibility: hidden;
   position: absolute;
+  transition: 1s;
   top: 200px;
   right: 14px;
   opacity: 0;
@@ -356,7 +359,7 @@ header .logo-section .logo {
   visibility: visible;
   top: 200px;
   right: 14px;
-  transition: 1.5s;
+  transition: 1s;
   opacity: 1;
   cursor: pointer;
 }
