@@ -107,10 +107,13 @@ main .title-heart .heart-animation .heart {
   position: absolute;
   top: 8px;
   right: 41px;
+  transition: 1s;
+  opacity: 1;
 }
 main .title-heart .heart-animation .full-heart {
   visibility: hidden;
   position: absolute;
+  transition: 1s;
   top: 8px;
   right: 41px;
   opacity: 0;
@@ -119,11 +122,10 @@ main .title-heart .heart-animation:hover .heart {
   visibility: hidden;
   position: absolute;
   cursor: pointer;
+  opacity: 0;
 }
 main .title-heart .heart-animation:hover .full-heart {
   visibility: visible;
-  position: absolute;
-  transition: 1.5s;
   opacity: 1;
   cursor: pointer;
 }

@@ -131,11 +131,14 @@ main {
                 position: absolute;
                 top: 8px;
                 right: 41px;
+                transition: 1s;
+                opacity: 1;
             }
 
             .full-heart {
                 visibility: hidden;
                 position: absolute;
+                transition: 1s;
                 top: 8px;
                 right: 41px;
                 opacity: 0;
@@ -147,13 +150,13 @@ main {
                 visibility: hidden;
                 position: absolute;
                 cursor: pointer;
-
+                opacity: 0;
             }
 
             .full-heart {
                 visibility: visible;
-                position: absolute;
-                transition: 1.5s;
+               
+              
                 opacity: 1;
                 cursor: pointer;
             }
