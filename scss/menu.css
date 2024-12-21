@@ -113,7 +113,7 @@ main .title-heart .heart-animation .heart {
 main .title-heart .heart-animation .full-heart {
   visibility: hidden;
   position: absolute;
-  transition: 1s;
+  transition: 1s;/*il faut mettre les transitions avant hover */
   top: 8px;
   right: 41px;
   opacity: 0;
