@@ -158,7 +158,6 @@ main .menu .card {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   margin: 12px 13px 12px 13px;
-  display: flex;
   position: relative;
   justify-content: space-between;
   cursor: pointer;
@@ -169,6 +168,7 @@ main .menu .card .text-card {
   align-content: center;
   flex-direction: column;
   overflow: hidden;
+  flex: 1;
 }
 main .menu .card .text-card h3 {
   font-family: Roboto;
@@ -195,84 +195,29 @@ main .menu .card .price {
   margin-right: 18px;
 }
 main .menu .card .btn-check {
-  position: absolute;
-  right: 0;
-  display: none;
-}
-main .menu .card:hover .price {
-  animation-name:sliding;
-  animation-duration: 500ms;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;/*animation du prix reste a la fin et retourne pas a sa place*/
-}
-.card:not(:hover) .btn-check {
-  display: flex;
-  animation: decreaseanddisappear 500ms forwards;
-}
-.card:not(:hover) .price {/*decreasing l annimation du price*/
-  animation-name: slidingreverse;
-  animation-duration: 500ms;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards; 
-}
-@keyframes sliding {
-  0%{
-      transform: translateX(0);
-  }
-  100%{
-    transform: translateX(-160px);
-  }
-}
-@keyframes appearandincrease {
-  0% {
-    transform: translateX(0);
-    opacity: 0.4;
-    width: 0px;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-    width:150px;
-  }
-}
-@keyframes slidingreverse {
-    0%{
-        transform: translateX(-160px);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-
-@keyframes decreaseanddisappear {
-    0% {  
-        transform: translateX(0px);
-        opacity: 1;
-        width: 150px;
-    }
-    100% { 
-        transform: translateX(0);
-        opacity: 0.4;
-        width: 0px;
-    }
-}
-
-main .menu .card:hover .btn-check {
   display: flex;
   height: 69px;
-  width: 59px;
   background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   align-items: center;
   justify-content: center;
-  animation: appearandincrease 500ms ease-in-out forwards;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.5s ease-in-out;
+}
+main .menu .card:hover .btn-check {
+  width: 59px;
 }
 main .menu .card:hover .btn-check .check {
   width: 20px;
   height: 20px;
   animation-name: rotate;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
+}
+main .menu .card:hover .card:not(:hover) .btn-check {
+  display: flex;
 }
 @keyframes rotate {
   0% {
